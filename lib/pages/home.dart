@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../productmanager.dart';
-
+// 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
