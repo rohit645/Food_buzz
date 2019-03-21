@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './pages/auth.dart';
+import './pages/productsadmin.dart';
+import './pages/home.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,7 +21,11 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.deepOrange,
         accentColor: Colors.blueGrey,
       ),
-      home: auth(),
+      // home: auth(),
+      routes: {
+        '/manage': (BuildContext context) => manageProducts(),
+        '/': (BuildContext context) => HomePage(),
+      },
     );
   }
 }
