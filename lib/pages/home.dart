@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
           appBar: AppBar(
             title: Text('Easy List'),
           ),
-          body: ProductManager(), // now making named arguments
+          body: ProductManager(), // now making   named arguments
     );
   }
 }

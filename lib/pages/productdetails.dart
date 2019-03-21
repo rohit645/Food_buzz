@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ProductDetails extends StatelessWidget {
+  String title; String imageUrl;
+  ProductDetails(this.title, this.imageUrl);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,10 +12,20 @@ class ProductDetails extends StatelessWidget {
         ),
         body: Column(
           children: <Widget>[
-            Text('Here are the details of the product!!'),
-            RaisedButton(onPressed: () {
-              Navigator.pop(context);
-            },child: Text('Go Back'),)
+            Image.asset(imageUrl),
+            Container(
+              padding: EdgeInsets.all(10.0),
+              child: Text(title),
+            ),
+            Container(
+              padding: EdgeInsets.all(10.0),
+              child: RaisedButton(
+                onPressed: () {
+                  Navigator.pop(context, true);
+                },
+                child: Text('DELETE'),
+              ),
+            )
           ],
         ));
   }
